@@ -1,0 +1,23 @@
+LOG START on  at Wednesday 19-Nov-2014 02:07:35 PM Pacific Standard Time
+02:07:35: 0.015  *    Start Listener: Local address: 10.135.251.60
+02:07:35: 0.015  0    Close Connection
+02:07:35: 0.015  0    Close Connection
+02:07:35: 0.015  0    Close Connection
+02:07:35: 0.015  0    Close Connection
+02:07:35: 0.795  0    Close Connection
+02:07:35: 0.795  1    Close Connection
+02:07:35: 0.795  2    Close Connection
+02:07:35: 0.795  3    Close Connection
+02:08:16: 41.509  -1 199 Timer Ticks
+02:08:16: 41.509  *    Start Match Requested
+02:08:16: 41.509  *    Teleop: 02:00
+02:08:16: 41.509  *    Autonomous: 00:30
+02:08:22: 47.492  -1 126 Timer Ticks
+02:08:22: 47.492  0    Close Connection
+02:08:22: 47.492  1    Close Connection
+02:08:22: 47.492  2    Close Connection
+02:08:22: 47.492  3    Close Connection
+02:08:22: 47.492  0    Close Connection
+02:08:22: 47.492  1    Close Connection
+02:08:22: 47.492  2    Close Connection
+02:08:22: 47.492  3    Close Connection

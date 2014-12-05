@@ -1,0 +1,36 @@
+LOG START on  at Thursday 20-Nov-2014 09:11:48 AM Pacific Standard Time
+09:11:48: 0.047  0    Close Connection
+09:11:48: 0.047  0    Close Connection
+09:11:48: 0.047  0    Close Connection
+09:11:48: 0.047  0    Close Connection
+09:11:48: 0.655  0    Close Connection
+09:11:48: 0.655  1    Close Connection
+09:11:48: 0.655  2    Close Connection
+09:11:48: 0.655  3    Close Connection
+09:13:39: 111.183  -1 2094 Timer Ticks
+09:13:39: 111.183  0    Close Connection
+09:13:39: 111.401  -1 5 Timer Ticks
+09:13:39: 111.401  0    Close Connection
+09:13:40: 112.230  -1 17 Timer Ticks
+09:13:40: 112.230  0    Close Connection
+09:13:40: 112.589  -1 8 Timer Ticks
+09:13:40: 112.589  0    Close Connection
+09:13:42: 114.913  -1 49 Timer Ticks
+09:13:42: 114.913  0    Connect
+09:13:47: 118.969  -1 87 Timer Ticks
+09:13:47: 118.969  0    Connect
+09:13:57: 129.312  -1 221 Timer Ticks
+09:13:57: 129.312  0    Connect
+09:15:05: 197.469  -1 1454 Timer Ticks
+09:15:05: 197.469  0    Connect
+09:17:12: 324.838  -1 2721 Timer Ticks
+09:17:12: 324.838  0    Connect
+09:45:28: 2020.165  -1 36221 Timer Ticks
+09:45:28: 2020.165  0    Close Connection
+09:45:28: 2020.165  1    Close Connection
+09:45:28: 2020.165  2    Close Connection
+09:45:28: 2020.165  3    Close Connection
+09:45:28: 2020.212  0    Close Connection
+09:45:28: 2020.212  1    Close Connection
+09:45:28: 2020.212  2    Close Connection
+09:45:28: 2020.212  3    Close Connection

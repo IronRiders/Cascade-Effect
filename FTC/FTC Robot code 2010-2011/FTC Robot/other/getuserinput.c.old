@@ -1,0 +1,266 @@
+void ChooseStrategy()
+{
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////																																														 ///////
+  ////////																	 Choosing the Color																				 ///////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  eraseDisplay();
+ /* nxtDisplayTextLine(1,"Choose Color:");
+  nxtDisplayStringAt(15,46, "Red");
+
+  while (nNxtButtonPressed!=Ok)
+  {
+    if (nNxtButtonPressed==Backward || nNxtButtonPressed==Forward)
+    {
+      PlayImmediateTone(900, 15);
+      if (color==Blue)
+      {
+        color=Red;
+        nxtDisplayClearTextLine(2);
+        nxtDisplayStringAt(15,46, "Red");
+      }
+      else if (color==Red)
+      {
+        color=Blue;
+        nxtDisplayClearTextLine(2);
+        nxtDisplayStringAt(15,46, "Blue");
+      }
+    }
+    wait1Msec(300);
+  }
+  PlayImmediateTone(800, 15);*/
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////																																														 ///////
+  ////////																	Choosing Which Side																				 ///////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  nxtDisplayTextLine(3, "Choose Side:");
+  nxtDisplayStringAt(15,30, "Left");
+  wait1Msec(1000);
+
+  while (nNxtButtonPressed!=Ok)
+  {
+    if (nNxtButtonPressed==Backward || nNxtButtonPressed==Forward)
+    {
+      PlayImmediateTone(900, 15);
+      if (side==LeftSide)
+      {
+        side=RightSide;
+        nxtDisplayClearTextLine(4);
+        nxtDisplayStringAt(15,30, "Right");
+      }
+      else if (side == RightSide)
+      {
+        side=LeftSide;
+        nxtDisplayClearTextLine(4);
+        nxtDisplayStringAt(15,30, "Left");
+      }
+    }
+
+
+    wait1Msec(300);
+  }
+  PlayImmediateTone(800, 15);
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////																																														 ///////
+  ////////																	 Choosing the strategy																		 ///////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  nxtDisplayTextLine(5, "Choose Strategy:");
+  nxtDisplayStringAt(15,14, "Score");
+
+  wait1Msec(1000);
+  while (nNxtButtonPressed!=Ok)
+  {
+    if (nNxtButtonPressed==Forward)
+    {
+      PlayImmediateTone(900, 15);
+      if (strategy==Score)
+      {
+        strategy=OtherSide;
+        nxtDisplayClearTextLine(6);
+        nxtDisplayStringAt(15,14, "Other Side");
+      }
+      else if (strategy==OtherSide)
+      {
+        strategy=Balance;
+        nxtDisplayClearTextLine(6);
+        nxtDisplayStringAt(15,14, "Balance");
+      }
+      else if (strategy==Balance)
+      {
+        strategy=Block;
+        nxtDisplayClearTextLine(6);
+        nxtDisplayStringAt(15,14, "Block");
+      }
+    }
+    else if (nNxtButtonPressed==Backward)
+    {
+      PlayImmediateTone(900, 15);
+      if (strategy==Score)
+      {
+        strategy=Block;
+        nxtDisplayClearTextLine(6);
+        nxtDisplayStringAt(15,14, "Block");
+      }
+      else if (strategy==Block)
+      {
+        strategy=Balance;
+        nxtDisplayClearTextLine(6);
+        nxtDisplayStringAt(15,14, "Balance");
+      }
+      else if (strategy==Balance)
+      {
+        strategy=OtherSide;
+        nxtDisplayClearTextLine(6);
+        nxtDisplayStringAt(15,14, "OtherSide");
+      }
+      else if (strategy==OtherSide)
+      {
+        strategy=Score;
+        nxtDisplayClearTextLine(6);
+        nxtDisplayStringAt(15,14, "Score");
+      }
+    }
+
+
+
+    wait1Msec(300);
+
+  }
+  PlayTone(800, 15);
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////																																														 ///////
+  ////////																	 Choosing the goal - Only if scoring											 ///////
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  if (strategy == Score)
+  {
+    nxtDisplayClearTextLine(6);
+
+    nxtDisplayTextLine(5, "Choose Score:");
+    nxtDisplayStringAt(15,14, "Dump");
+    wait1Msec(1000);
+    while (nNxtButtonPressed!=Ok)
+    {
+      if (nNxtButtonPressed==Forward)
+      {
+        PlayImmediateTone(900, 15);
+        if (goal==Doubler)
+        {
+          goal=preloadDump;
+          nxtDisplayClearTextLine(6);
+          nxtDisplayStringAt(15,14, "Dump");
+        }
+        else if (goal==preloadDump)
+        {
+          goal=ScoreAndCross;
+          nxtDisplayClearTextLine(6);
+          nxtDisplayStringAt(15,14, "Score and Cross");
+        }
+        else if (goal==ScoreAndCross)
+        {
+          goal=Corrigated;
+          nxtDisplayClearTextLine(6);
+          nxtDisplayStringAt(15,14, "Corrigated");
+        }
+        else if (goal==Corrigated)
+        {
+          goal=Doubler;
+          nxtDisplayClearTextLine(6);
+          nxtDisplayStringAt(15,14, "Get Doubler");
+        }
+        else if (nNxtButtonPressed==Backward)
+        {
+          PlayImmediateTone(900, 15);
+          if (goal==Doubler)
+          {
+            goal=Corrigated;
+            nxtDisplayClearTextLine(6);
+            nxtDisplayStringAt(15,14, "Corrigated");
+          }
+          else if (goal==Corrigated)
+          {
+            goal=ScoreAndCross;
+            nxtDisplayClearTextLine(6);
+            nxtDisplayStringAt(15,14, "Score and Cross");
+          }
+          else if (goal==ScoreAndCross)
+          {
+            goal=preloadDump;
+            nxtDisplayClearTextLine(6);
+            nxtDisplayStringAt(15,14, "Dump");
+          }
+          else if (goal==preloadDump)
+          {
+            goal=Doubler;
+            nxtDisplayClearTextLine(6);
+            nxtDisplayStringAt(15,14, "Get Doubler");
+
+
+
+          }
+          wait1Msec(250);
+        }
+      }
+      PlayImmediateTone(800, 15);
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      ////////																																														 ///////
+      ////////																	Choosing where to block - Only if blocking								 ///////
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      if (strategy == Block)
+      {
+
+
+        nxtDisplayTextLine(5, "Choose Block:");
+        nxtDisplayStringAt(15,14, "Ramp");
+
+        wait1Msec(1000);
+        while (nNxtButtonPressed!=Ok)
+        {
+          if (nNxtButtonPressed==Backward)
+          {
+            PlayImmediateTone(900, 15);
+            if (block==Ramp)
+            {
+              block = Bridge;
+              nxtDisplayClearTextLine(6);
+              nxtDisplayStringAt(15,14, "Bridge");
+            }
+            else if (block==Bridge)
+            {
+              block=Ramp;
+              nxtDisplayClearTextLine(6);
+              nxtDisplayStringAt(15,14, "Ramp");
+            }
+          }
+          if (nNxtButtonPressed==Forward)
+          {
+            if (goal==Bridge)
+            {
+              goal=Ramp;
+              nxtDisplayClearTextLine(6);
+              nxtDisplayStringAt(15,14, "Ramp");
+            }
+            else if (goal==Ramp)
+            {
+              goal=Bridge;
+              nxtDisplayClearTextLine(6);
+              nxtDisplayStringAt(15,14, "Bridge");
+            }
+          }
+
+          wait1Msec(250);
+        }
+
+
+
+        PlayTone(800, 150);
+        eraseDisplay();
+
+      }
+    }
+  }
+}
